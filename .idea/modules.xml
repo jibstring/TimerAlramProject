@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TimerAlramProject.iml" filepath="$PROJECT_DIR$/TimerAlramProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TimerAlarmProject.iml" filepath="$PROJECT_DIR$/TimerAlarmProject.iml" />
     </modules>
   </component>
 </project>
