@@ -52,7 +52,8 @@ public class Main {
         PlayMP3 playMP3 = null;
 
         // 사용자가 지정한 디렉토리에서 mp3 파일을 fileList에 저장
-        String DATA_DIRECTORY = "C:\\Users\\ooppy\\Downloads\\alram";
+        // String DATA_DIRECTORY = "C:\\Users\\ooppy\\Downloads\\alram";
+        String DATA_DIRECTORY = System.getProperty("user.dir");
         File dir = new File(DATA_DIRECTORY);
         List<File> fileList = new ArrayList<>();
 
@@ -68,7 +69,7 @@ public class Main {
         // 비활성 시간이 x초를 경과하면 사용자 사운드 랜덤 재생
         // 재생 후 비활성 시간 0으로 초기화
         int inactiveSec = 0;
-        int inactiveLimit = 60;
+        int inactiveLimit = 240;
         double mouse_x = 0, mouse_y = 0;
         double cur_x = 0, cur_y = 0;
 
