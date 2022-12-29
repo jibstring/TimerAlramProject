@@ -11,6 +11,8 @@
  */
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 import jaco.mp3.player.MP3Player;
@@ -44,9 +46,34 @@ public class Main {
         }
     }
 
+    public static void makeTray() {
+        MenuItem exititem = new MenuItem("exit");
+        PopupMenu menu = new PopupMenu("My Menu");
+
+        menu.add(exititem);
+        exititem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(1);
+            }
+        });
+
+        TrayIcon myTray =
+                new TrayIcon(Toolkit.getDefaultToolkit().getImage("src/lib/alarmpuppyicon.png"), "Timer Alarm Project", menu);
+        SystemTray tray = SystemTray.getSystemTray();
+
+        try {
+            tray.add(myTray);
+        } catch (AWTException e1) {
+            System.out.println(e1.getMessage());
+        }
+        myTray.setImageAutoSize(true);
+    }
+
     public static void main(String[] args) throws InterruptedException {
 
         System.out.println("Timer Alarm Started!");
+        makeTray();
 
         PointerInfo pt = null;
         PlayMP3 playMP3 = null;

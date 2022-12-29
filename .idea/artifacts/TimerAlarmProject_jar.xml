@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TimerAlarmProject:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TimerAlarmProject_jar</output-path>
+    <root id="archive" name="TimerAlarmProject.jar">
+      <element id="module-output" name="TimerAlarmProject" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/lib/player.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/lib/jaco-mp3-player-0.9.3.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
